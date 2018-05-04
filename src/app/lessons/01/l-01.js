@@ -399,11 +399,9 @@ console.log('\nLesson 01 - Homework:\n\n!!! Please answer the questions in this 
 // Task 01.05 - 3 points
 // Q: Please write a function which calculates the difference between two numbers
 // A: var a, b, diff;
-function firstOne () {
-    a = 120;
-    b = 326;
+function firstOne (a, b) {
     diff =  b - a;	
     return diff
 };
-console.log(firstOne ());
+console.log(firstOne (120, 326));
 // Lesson 01 Homework - End
