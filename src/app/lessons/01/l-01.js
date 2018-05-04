@@ -185,8 +185,8 @@ var lastChar = foo.charAt( fooLength - 1);
 // Повертає символ, що має у рядкові індекс index.
 // Нумерація символів рядка починаєтся з нуля:
 
-foo.charAt(0); // 'b'
 foo.charAt(1); // 'a'
+foo.charAt(0); // 'b'
 foo.charAt(2); // 'r'
 
 //
@@ -382,21 +382,28 @@ console.log('\nLesson 01 - Homework:\n\n!!! Please answer the questions in this 
 
 // Task 01.01 - 1 point
 // Question: Can JavaScript file contain non-executable code?
-// Answer: TODO
+// Answer: don`t
 
 // Task 01.02 - 2 points
 // Question: How we can tell the JS interpreter to use strict mode?
-// Answer: TODO
+// Answer: use strict
 
 // Task 01.03 - 2 points
 // Q: What simple data types are used in JS?
-// A: TODO
+// A: number, string, boolean
 
 // Task 01.04 - 2 points
 // Q: What complex data types are used in JS?
-// A: TODO
+// A: Object (Array, Date, Function, RegExp)
 
 // Task 01.05 - 3 points
 // Q: Please write a function which calculates the difference between two numbers
-// A: TODO
+// A: var a, b, diff;
+function firstOne () {
+    a = 120;
+    b = 326;
+    diff =  b - a;	
+    return diff
+};
+console.log(firstOne ());
 // Lesson 01 Homework - End
