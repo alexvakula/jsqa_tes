@@ -382,7 +382,7 @@ console.log('\nLesson 01 - Homework:\n\n!!! Please answer the questions in this 
 
 // Task 01.01 - 1 point
 // Question: Can JavaScript file contain non-executable code?
-// Answer: don`t
+// Answer: yes
 
 // Task 01.02 - 2 points
 // Question: How we can tell the JS interpreter to use strict mode?
