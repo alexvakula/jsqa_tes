@@ -529,7 +529,8 @@ console.log('\nTask 04.01');
 // Використай метод push, щоб додати до масиву ще одне просте число.
 // TODO: пиши код тут:
 
-let primeNumbers;
+let primeNumbers = [2,3,5,7,11,13,17,19,23,29];
+primeNumbers.push(31);
 
 // Цей код тестує завдання:
 if (primeNumbers && primeNumbers.length === 11) {
@@ -545,6 +546,10 @@ console.log('\nTask 04.02');
 // Напиши функцію sortNumbers і використай її у методі sort масиву primeNumbers для того, 
 // щоб відсортувати його елементи у зворотньому порядку.
 // TODO: пиши код тут:
+let sortNumbers = function (a,b){
+	return b-a
+}
+primeNumbers.sort(sortNumbers);
 // Цей код тестує завдання:
 if (primeNumbers && primeNumbers[0] && primeNumbers[0] === 31) {
 	console.log('Task 04.02 is DONE! ');
@@ -560,6 +565,8 @@ console.log('\nTask 04.03');
 // Points: 2
 // За допомогою методу splice виріж з масиву елементи з другого по третій і при цьому заміни їх на рядок 'foo'.
 // TODO: пиши код тут:
+primeNumbers.splice(2,2,'foo');
+
 if (primeNumbers && primeNumbers[2] === 'foo') {
 	console.log('Task 04.03 is DONE! ');
 } else {
@@ -575,6 +582,12 @@ console.log('\nTask 04.04');
 // Використай метод Array.forEach для того, 
 // щоб додати до кожного елементу масиву [21, 63, 84] число '42'
 // TODO: пиши свій код тут:
+let arr = [21, 63, 84];
+arr.forEach(function(item){
+	item = item + 42;
+	console.log(item);
+});
+
 console.log('Please make Task 04.04');
 
 
@@ -592,6 +605,9 @@ var crazyMix = [1, '1', true, 2, '02', 3, '0', '10', 11, [], {}, function() {}];
 function arrayCleanUp(arrayToCleanUp) {
 	var cleanedUp = arrayToCleanUp;
 	// TODO: пиши свій код тут:
+	cleanedUp = cleanedUp.filter(function(item){
+		return typeof(item) === 'number';
+	})
 	return cleanedUp;
 }
 
@@ -619,9 +635,15 @@ var matrix = [
 	[4, 5, 29, 3],
 	[2, 12, 4, 7]
 ];
-
+var maxValues = [];
 function findMaxInMatrix(mtx) {
 	// TODO: пиши свій код тут:
+	for (let i = 0; i < mtx.length; i++){
+		mtx[i].sort(function(a,b){return b - a});
+		maxValues.push(mtx[i][0]);
+	}
+	maxValues.sort(function(a,b){return b - a});
+	return maxValues[0];
 }
 
 var res = findMaxInMatrix(matrix);
