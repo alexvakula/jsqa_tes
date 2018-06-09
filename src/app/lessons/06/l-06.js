@@ -350,9 +350,15 @@ const glo = 'glo site';
 	// функцію cube, що приймає один числовий параметр і повертає куб від цього числа.
 	// TODO: пишіть свій код тут:
 
+	var cube = function(c) { return c * c * c;};
+
+	console.log(cube(30));
+
 	console.log('\nPlease implement this task');
 
+	function cube2 (a){return a*a*a;}
 
+		+console.log(cube2(16));
 
 
 
@@ -361,6 +367,12 @@ const glo = 'glo site';
 
 	// Спробуй відповісти, не запускаючи код на виконнання: що код виведе у консоль?
 	// TODO: пиши відповідь тут:
+	// log from function scope:
+	// LOCAL1
+	// LOCAL2
+	// log from global scope:
+	// global1
+	// LOCAL2
 
 	console.log('\nPlease implement this task');
 
@@ -393,6 +405,19 @@ const glo = 'glo site';
 	// з консолі показував LOCAL1 замість global1
 
 	// TODO: код тут:
+	var global1 = 'global1';
+	var global2 = 'global2';
+
+	var function1 = function () {
+	    global1 = 'LOCAL1';
+		global2 = 'LOCAL2';
+		console.log('log from function scope: \n', global1, '\n', global2);
+	};
+
+	function1();
+
+	console.log('log from global scope: \n', global1, '\n', global2);
+
 
 	console.log('\nPlease implement this task');
 
@@ -412,6 +437,18 @@ const glo = 'glo site';
 	// з консолі показував global2 замість LOCAL2
 
 	// TODO: код тут:
+	var global1 = 'global1';
+	var global2 = 'global2';
+
+	var function1 = function () {
+	    global1 = 'LOCAL1';
+		var global2 = 'LOCAL2';
+		console.log('log from function scope: \n', global1, '\n', global2);
+	};
+
+	function1();
+
+	console.log('log from global scope: \n', global1, '\n', global2);
 
 	console.log('\nPlease implement this task');
 
@@ -432,6 +469,18 @@ const glo = 'glo site';
 	// Напиши код, який викликає blackBox, у якості параметра передаючи 'secret'
 
 	// TODO: пишіть свій код тут:
+
+	function blackBox(hidden){
+		return function insider (){
+			return hidden;
+		};
+	}
+	var blackBoxResult = blackBox('secret');
+	console.log(blackBoxResult);
+	
+	var insiderResult = blackBoxResult();
+	console.log(insiderResult);
+
 
 	console.log('\nPlease implement this task');
 
